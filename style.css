@@ -3,10 +3,14 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css");
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
+}
+body{
+  flex-direction: row;
 }
 
 :root {
@@ -20,10 +24,12 @@ html{
 }
 
 .hamburguer {
-  background-color: red; 
+  background-color:#dbcd48; 
   width: 2rem;
-  height: 2rem;
+  height: 2em;
   position: fixed;
+  border: #17181b;
+  border-radius:2px 1px 1px 2px ;
   z-index: 100;
   right: 2rem;
   top: 2rem;
@@ -34,7 +40,7 @@ html{
 }
 
 .show-menu .hamburguer {
-  right: 16rem;
+  right: 12rem;
 }
 
 .line {
@@ -60,12 +66,13 @@ html{
   position: absolute;
   left: 3rem;
   height: 2rem;
-  width: 6rem;
+  width: 5rem;
   display: flex;
+  border-radius:15px 3px 3px 15px;
   justify-content: center;
   align-items: center;
-  background-color: #70ff44;
-  color: #ffffff;
+  background-color: #F0E68C;
+  color: #000;
   font-family: var(--font-action);
   opacity: 0;
 }
@@ -73,15 +80,15 @@ html{
 .hamburguer span::before {
   content: "";
   position: absolute;
-  border-right: 0.5rem solid #fa0c0c;
+  border-right: 0.5rem solid #fff;
   border-top: 0.5rem solid transparent;
   border-left: 0.5rem solid transparent;
   border-bottom: 0.5rem solid transparent;
-  left: -1rem;
+  left: -2rem;
 }
 
 .show-menu .hamburguer:hover span {
-  opacity: 1;
+  opacity: 0;
 }
 
 header {
@@ -122,7 +129,7 @@ header {
 }
 
 .banner h1 {
-  color: #ffffff;
+  color: #dcc145;
   font-size: 3.5rem;
   font-family: var(--font-primary);
   font-weight: 200;
@@ -135,7 +142,7 @@ header {
 
 .banner p {
   font-family: var(--font-secundary);
-  color: #fff;
+  color:#dcc145;
   font-size: 2rem;
   text-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
   margin-bottom: 2rem;
@@ -153,7 +160,7 @@ header {
   background: linear-gradient(to left, #dbcd48,#b1ac7f);
   padding: 1rem 3rem;
   border: none;
-  border-radius: 5px;
+  border-radius:15px 15px;
   cursor: pointer;
   opacity: 0;
   animation: moveBanner 4s 0.9s forwards;
@@ -170,10 +177,11 @@ header {
 }
 
 .sidebar {
-  width: 20rem;
-  height: 100vh;
-  background-color: #fff;
+  width: 14rem;
+  height: 24%;
+  background-color: #4b3e1f;
   position: fixed;
+  border-radius: 24px;
   top: 0;
   right: -20rem;
   transition: all 1s;
@@ -186,9 +194,11 @@ header {
 
 .menu {
   position: absolute;
-  top: 40%;
+  top: 63%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity:rgb(0,0,0,0.8);
+  border-bottom: #000;
 }
 
 .menu-item {
@@ -199,12 +209,12 @@ header {
 .menu-link {
   font-family: var(--font-action);
   font-size: 2rem;
-  color: #555;
+  color: #dbcd48;
   transition: color 1s;
 }
 
 .menu-link:hover {
-  color: #70ff44;
+  color: #dbcd48;
 }
 
 .social-media {
@@ -216,7 +226,7 @@ header {
 }
 
 .social-media i {
-  background-color: #6a3093;
+  background-color: #dbcd48;
   color: rgba(255, 255, 255, 1);
   height: 2.5rem;
   width: 2.5rem;
@@ -229,8 +239,8 @@ header {
 }
 
 .social-media i:hover {
-  background-color: #a044ff;
-}
+  background-color: #dbcd48;
+}/*
 
 .conhecimentos {
   height: 100%;
@@ -273,7 +283,7 @@ header {
 .sessao-conhecimentos {
   background-color: #f5f5f5;
   height: 100%;
-}
+}*/
 
 .sessao-header {
   display: flex;
@@ -288,7 +298,7 @@ header {
   border-bottom: solid 3px #6a3093;
   margin-bottom: 1.5rem;
 }
-
+/*
 .conhecimento-header {
   display: flex;
   align-items: center;
@@ -326,7 +336,7 @@ header {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 2rem;
-}
+}*/
 
 .card {
   width: 18rem;
@@ -374,7 +384,7 @@ header {
 .card-info h3 {
   font-family: var(--font-action);
   font-weight: bolder;
-  color: #ff4081;
+  color: #000;
   margin-bottom: 1.5rem;
 }
 
@@ -387,9 +397,9 @@ header {
 }
 
 .btn {
-  background: #6a3093;
-  background: -webkit-linear-gradient(to right, #a044ff, #6a3093);
-  background: linear-gradient(to left, #a044ff, #6a3093);
+  background: #F0E68C;
+  background: -webkit-linear-gradient(to right, #dcc148, #CD9B1D);
+  background: linear-gradient(to left, #dbcd48, #CD9B1D);
   font-family: var(--font-action);
   color: rgb(238, 238, 238);
   border-radius: 0.5rem;
@@ -411,29 +421,29 @@ header {
 .sessao-contato {
   width: 100%;
   height: 100vh;
-  background-color: #272727;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .contato-wrapper {
-  width: 60%;
-  height: 30rem;
+  width: 72%;
+  height: 20rem;
   display: flex;
-  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.8);
 }
 
 .contato-left {
-  width: 35%;
+  width: 65%;
   background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)),
-    url(imagens/contato.jpg);
+  url(./imagens/adega2.jpg);
   background-size: cover;
 }
 
 .contato-right {
   width: 65%;
-  background-color: #eee;
+  background-color: #fff;
   padding: 1rem 3rem 3rem 3rem;
 }
 
@@ -441,8 +451,8 @@ header {
   width: 100%;
   text-align: center;
   font-family: var(--font-primary);
-  color: #272727;
-  font-size: 3rem;
+  color: #fff;
+  font-size: 2rem;
   font-weight: lighter;
 }
 
@@ -492,7 +502,7 @@ header {
 
 .field:focus {
   border-bottom: 1px solid;
-  background-color: rgb(201, 41, 41);
+  background-color: #FFF;
 }
 
 .btn-submit {
@@ -505,7 +515,7 @@ header {
   cursor: pointer;
   text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
   box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
-  color: chocolate;
+  color:#fff;
 }
 
 .preenchido{
@@ -514,7 +524,7 @@ header {
 
 .sessao-orcamento{
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   background: url("imagens/adega3.jpg");
   object-fit: cover;
   display: flex;
@@ -523,8 +533,8 @@ header {
 }
 
 .orcamento-wrapper{
-  width: 60%;
-  height: 80%;
+  width: 70%;
+  height: 35%;
   background-color: #ffffff99;
   border-radius: 10px;
   box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
@@ -533,39 +543,39 @@ header {
 
 .sessao-orcamento h1{
   position: absolute;
-  top: -2.5rem;
-  left: 2rem;
-  background: #6a3093;
-  background: -webkit-linear-gradient(to right, #a044ff, #6a3093);
-  background: linear-gradient(to left, #a044ff, #6a3093);
+  top: -3.8rem;
+  left: 1rem;
+  background: #dbcd48;
+  background: -webkit-linear-gradient(to right,#F0E68C #FFC120, #CD9B1D);
+  background: linear-gradient(to left, #F0E68C#F0ee7a, #CD9B1D);
   padding: 0 3rem;
-  color: #fff;
+  color:rgb(125, 145, 165);
   font-family: var(--font-primary);
-  font-size: 3rem;
+  font-size: 1.4rem;
   font-weight: lighter;
   box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 .sessao-orcamento form{
-  margin: 4rem;
+  margin: 1rem;
   display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 2rem;
-  row-gap: 2rem;
+  grid-template-columns: auto 2fr;
+  column-gap: 1rem;
+  row-gap: 1rem;
 }
 
 .sessao-orcamento label{
   font-family: var(--font-action);
-  font-size: 1.5rem;
+  font-size: 0.5rem;
 }
 
 .sessao-orcamento input[type="number"]{
   font-family: var(--font-secundary);
-  width: 4rem;
-  font-size: 2rem;
+  width: 1rem;
+  font-size: 1.5rem;
   outline: none;
-  border-radius: 10px;
+  border-radius:10px;
   border: none;
   padding: 0.3rem;
 }
@@ -579,10 +589,10 @@ header {
 
 footer{
   width: 100%;
-  height: 7rem;
+  height: 3rem;
   background-color: #17181b;
-  display: flex;
-  justify-content: center;
+  display:flex;
+  justify-content:center;
   align-items: center;
 }
 
@@ -595,17 +605,19 @@ footer{
 .footer-content p{
   font-family: var(--font-secundary);
   color: #a7a7a7;
-  font-size: 1.2rem;
+  font-size: .2rem;
 }
+
 
 .social-list a{
   margin: 0 2rem;
   color: #a7a7a7;
-  font-size: 1.3rem;
+  font-size: .3rem;
+  display: block;
 }
 
 .social-list ul {
-  display: flex;
+  display:flex;
 }
 
 #link-topo{
@@ -614,7 +626,7 @@ footer{
   bottom: 3rem;
   width: 3rem;
   height: 3rem;
-  background: #6a3093;
+  background: #dbcd48;
   background: -webkit-linear-gradient(to right, #FFC120,#CD9B1D,#F0E68C );
   background: -webkit-linear-gradient(to right, #a044ff, );
   background: linear-gradient(to left, #CD9B1D,#FFC125,#F0E68C);
@@ -622,7 +634,7 @@ footer{
   justify-content: center;
   align-items: center;
   color: #fff;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   box-shadow:  0 0.1rem 0.6rem #00000009;
 }
 
